@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/p5.js"></script>
+    <script>
+      var mid_rad = 150
+      var angle = 0.0
+      function setup() {
+        createCanvas(window.innerWidth, window.innerHeight);
+      }
+
+      function draw() {
+        createCanvas(window.innerWidth, window.innerHeight);
+        background(250, 250, 250, 100); 
+        new_rad = ((3*sin(angle)*mid_rad/2) + mid_rad*1.5)
+        ellipse(window.innerWidth/2, window.innerHeight/2, new_rad, new_rad);
+        angle += 0.01
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
