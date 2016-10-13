@@ -21,7 +21,6 @@ function setup() {
 function draw() {
   createCanvas(window.innerWidth, window.innerHeight);
   background(bg_color);
-  //noStroke();
 
   stroke(255, 255, 255, 100);
   fill(255, 255, 255, 100);
@@ -30,11 +29,19 @@ function draw() {
   angle += 0.015;
 
   timeString = str(hour()) + "." + str(minute()) + "." + str(second());
-  textAlign(CENTER);
+  textAlign(CENTER, CENTER);
   stroke(250);
   fill(250);
   textSize(24);
   text(timeString, window.innerWidth/2, window.innerHeight-40);
+
+  fill(bg_color);
+  stroke(bg_color);
+  if (sin(angle) >= 0) {
+    text("out", window.innerWidth/2, window.innerHeight/2)
+  } else {
+    text("in", window.innerWidth/2, window.innerHeight/2)
+  }
 
 }
 
