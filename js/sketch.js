@@ -8,11 +8,11 @@ function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
 
   var colors = [
-    color(105, 126, 141),
-    color(233, 230, 194),
-    color(214, 213, 189),
-    color(195, 167, 112),
-    color(167, 75, 34)
+    color(20, 35, 29),
+    color(105, 96, 121),
+    color(41, 78, 90),
+    color(72, 108, 103),
+    color(132, 143, 125)
   ]
 
   bg_color = colors[Math.floor(Math.random()*colors.length)];
@@ -38,9 +38,9 @@ function draw() {
   fill(bg_color);
   stroke(bg_color);
   if (sin(angle) >= 0) {
-    text("out", window.innerWidth/2, window.innerHeight/2)
+    text("O", window.innerWidth/2, window.innerHeight/2)
   } else {
-    text("in", window.innerWidth/2, window.innerHeight/2)
+    text("I", window.innerWidth/2, window.innerHeight/2)
   }
 
 }
