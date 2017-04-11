@@ -29,11 +29,13 @@ function draw() {
   angle += 0.015;
 
   timeString = str(hour()) + "." + str(minute()) + "." + str(second());
+  dateString = str(month()) + "." + str(day());
   textAlign(CENTER, CENTER);
   stroke(250);
   fill(250);
   textSize(24);
   text(timeString, window.innerWidth/2, window.innerHeight-40);
+  text(dateString, window.innerWidth/2, window.innerHeight-68);
 
   fill(bg_color);
   stroke(bg_color);
